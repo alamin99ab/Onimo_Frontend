@@ -1,5 +1,3 @@
-// src/context/AuthContext.jsx
-
 import React, { createContext, useState, useEffect, useCallback } from 'react';
 import { jwtDecode } from "jwt-decode";
 import { loginWithEmail } from '../services/api';
@@ -55,7 +53,6 @@ export const AuthProvider = ({ children }) => {
         toast('Logged out successfully.', { icon: '👋' });
     };
 
-    // --- নতুন ফাংশন এখানে যোগ করা হয়েছে ---
     const loginWithToken = (tokenFromGoogle) => {
         updateUserAndToken(tokenFromGoogle);
         toast.success('Successfully logged in with Google!');

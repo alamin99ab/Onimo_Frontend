@@ -8,12 +8,11 @@ export default function CodeBlock({ language, code }) {
 
     let highlightedCode;
     try {
-        // Check if the language is supported by highlight.js
         const validLanguage = hljs.getLanguage(language) ? language : 'plaintext';
         highlightedCode = hljs.highlight(code, { language: validLanguage }).value;
     } catch (error) {
         console.error("Highlighting error:", error);
-        highlightedCode = code; // Fallback to plain text if highlighting fails
+        highlightedCode = code; 
     }
 
     const handleCopy = () => {
@@ -25,7 +24,6 @@ export default function CodeBlock({ language, code }) {
 
     return (
         <div className="bg-[#282c34] rounded-lg my-4 overflow-hidden shadow-lg">
-            {/* Header with language and copy button */}
             <div className="flex justify-between items-center px-4 py-2 bg-gray-700 text-gray-300 text-xs font-sans">
                 <span>{language}</span>
                 <button onClick={handleCopy} className="flex items-center gap-2 text-xs hover:text-white transition-colors">
@@ -42,7 +40,6 @@ export default function CodeBlock({ language, code }) {
                     )}
                 </button>
             </div>
-            {/* Code content */}
             <pre className="m-0 p-4 text-sm overflow-x-auto">
                 <code
                     className={`language-${language}`}

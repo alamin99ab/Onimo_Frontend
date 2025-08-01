@@ -1,5 +1,3 @@
-// src/components/Navbar.jsx
-
 import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
@@ -13,7 +11,6 @@ export default function Navbar() {
         <nav className="bg-white dark:bg-gray-800 shadow-sm sticky top-0 z-50">
             <div className="max-w-7xl mx-auto px-4">
                 <div className="flex items-center justify-between h-16">
-                    {/* Left Side: Logo and Navigation Links */}
                     <div className="flex items-center space-x-6">
                         <Link to="/">
                             <svg className="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -31,8 +28,6 @@ export default function Navbar() {
                             </NavLink>
                         </div>
                     </div>
-
-                    {/* Right Side: Auth buttons and Theme Toggle */}
                     <div className="flex items-center space-x-4">
                         <button onClick={toggleTheme} className="p-2 rounded-full text-gray-500 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
                             {theme === 'light' ? <i className="fas fa-moon"></i> : <i className="fas fa-sun"></i>}

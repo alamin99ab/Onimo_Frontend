@@ -2,7 +2,6 @@ import React from 'react';
 import { marked } from 'marked';
 import CodeBlock from './CodeBlock';
 
-// ... parseMessageContent ফাংশনটি আগের মতোই থাকবে ...
 const parseMessageContent = (text) => {
     if (!text) return [];
     const codeBlockRegex = /```(\w+)?\n([\s\S]+?)\n```/g;
@@ -35,7 +34,6 @@ export default function Message({ sender, text }) {
                         return <CodeBlock key={index} language={part.language} code={part.content} />;
                     }
                     const htmlContent = marked.parse(part.content, { breaks: true });
-                    // --- মূল পরিবর্তন এখানে: dark:prose-invert ---
                     return <div key={index} className="prose prose-sm max-w-none p-4 dark:prose-invert prose-p:text-inherit prose-strong:text-inherit" dangerouslySetInnerHTML={{ __html: htmlContent }} />;
                 })}
             </div>

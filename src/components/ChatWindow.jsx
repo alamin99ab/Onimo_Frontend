@@ -66,7 +66,6 @@ export default function ChatWindow({ conversationId, setConversationId, refreshC
     };
 
     return (
-        // --- মূল কন্টেইনারকে সেন্ট্রালাইজড করা হয়েছে ---
         <div className="flex-1 flex flex-col h-full w-full max-w-4xl mx-auto">
             <div className="p-3 flex justify-between items-center bg-gray-100 dark:bg-gray-900">
                  <div className="flex items-center">
@@ -77,7 +76,6 @@ export default function ChatWindow({ conversationId, setConversationId, refreshC
                         {conversationId ? "Continue Conversation" : "New Chat"}
                     </h3>
                 </div>
-                {/* Mode buttons can be kept or removed for a cleaner look */}
             </div>
 
             <div className="flex-1 p-4 overflow-y-auto">
@@ -90,7 +88,6 @@ export default function ChatWindow({ conversationId, setConversationId, refreshC
                 </div>
             </div>
 
-            {/* --- নতুন "Gemini-style" ইনপুট বক্স --- */}
             <div className="p-4 w-full">
                 <form onSubmit={handleSendMessage} className="relative">
                     <input

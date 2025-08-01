@@ -48,7 +48,6 @@ export default function Chat() {
                 isSidebarOpen={isSidebarOpen}
                 setIsSidebarOpen={setIsSidebarOpen}
             />
-            {/* --- চ্যাট উইন্ডোর জন্য একটি সেন্ট্রাল কন্টেইনার --- */}
             <div className="flex-1 flex flex-col items-center w-full h-full">
                 <ChatWindow
                     conversationId={currentConversationId}

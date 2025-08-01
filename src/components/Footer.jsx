@@ -6,13 +6,10 @@ export default function Footer() {
         <footer className="bg-gray-800 dark:bg-black text-gray-300">
             <div className="container mx-auto py-12 px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                    {/* Onimo Info */}
                     <div>
                         <h3 className="text-lg font-bold text-white mb-4">Onimo AI</h3>
                         <p className="text-gray-400 text-sm">Your personal AI assistant to boost creativity and productivity.</p>
                     </div>
-
-                    {/* Quick Links */}
                     <div>
                         <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Quick Links</h3>
                         <ul className="mt-4 space-y-2">
@@ -20,8 +17,6 @@ export default function Footer() {
                             <li><Link to="/chat" className="text-base text-gray-300 hover:text-white">Chat</Link></li>
                         </ul>
                     </div>
-
-                    {/* Legal */}
                     <div>
                         <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Legal</h3>
                         <ul className="mt-4 space-y-2">
@@ -30,7 +25,6 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    {/* Social Media */}
                     <div>
                         <h3 className="text-sm font-semibold text-gray-400 tracking-wider uppercase">Follow Us</h3>
                         <div className="flex mt-4 space-x-6">

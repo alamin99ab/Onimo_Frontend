@@ -4,36 +4,26 @@ import { Link } from 'react-router-dom';
 export default function Home() {
     return (
         <div className="relative overflow-hidden bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
-            {/* Aesthetic Background Blobs */}
             <div className="absolute top-0 -left-4 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob dark:opacity-30"></div>
             <div className="absolute top-0 -right-4 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000 dark:opacity-30"></div>
             
             <section className="relative flex items-center justify-center min-h-[calc(100vh-4rem)] px-4 sm:px-6 lg:px-8">
                 <div className="container mx-auto z-10">
                     <div className="grid md:grid-cols-2 gap-8 items-center">
-                        {/* Left Side: Robot Image and Animation */}
                         <div className="relative flex flex-col justify-center items-center h-full">
-                            
-                            {/* --- চ্যাট বক্স (সঠিকভাবে যোগ করা হয়েছে) --- */}
                             <div className="absolute top-12 left-1/2 -translate-x-1/2 w-44 animate-fade-in-up-bubble opacity-0 z-20">
                                 <div className="bg-white dark:bg-gray-700 p-3 rounded-xl shadow-2xl relative">
                                     <p className="text-md font-semibold text-gray-800 dark:text-white text-center">Hey! I am Onimo.</p>
                                     <div className="absolute left-1/2 -ml-2 bottom-0 w-4 h-4 transform rotate-45 bg-white dark:bg-gray-700 -mb-2"></div>
                                 </div>
                             </div>
-
-                            {/* --- রোবট ইমেজ (সঠিক আকারে) --- */}
                             <img 
                                 src="https://i.postimg.cc/bJbjWRgj/hero-image.png"
                                 alt="Onimo AI Robot"
                                 className="w-full max-w-[18rem] drop-shadow-2xl z-10"
                             />
-
-                            {/* --- প্ল্যাটফর্ম শ্যাডো --- */}
                             <div className="absolute bottom-10 w-48 h-8 bg-black/20 dark:bg-blue-500/20 rounded-full filter blur-xl"></div>
                         </div>
-
-                        {/* Right Side: Main Content */}
                         <div className="text-center md:text-left">
                             <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 dark:text-white mb-4">
                                 Welcome to <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Onimo AI</span>
@@ -60,8 +50,6 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-
-            {/* About Onimo Section */}
             <section id="about-onimo" className="py-20 bg-white dark:bg-gray-800">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12">

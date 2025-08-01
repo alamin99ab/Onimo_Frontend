@@ -1,13 +1,11 @@
 import axios from 'axios';
 
-// আপনার .env ফাইল থেকে URL নেওয়া হচ্ছে
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 
 const api = axios.create({
     baseURL: API_BASE_URL,
 });
 
-// প্রতিটি রিকোয়েস্টে স্বয়ংক্রিয়ভাবে টোকেন যোগ করার জন্য
 api.interceptors.request.use(config => {
     const token = localStorage.getItem('authToken');
     if (token) {

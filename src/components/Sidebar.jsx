@@ -24,13 +24,11 @@ export default function Sidebar({ conversations, isLoading, onNewChat, onSelectC
 
     return (
         <>
-            {/* Overlay for mobile */}
+
             <div 
                 className={`fixed inset-0 bg-black/50 z-30 md:hidden transition-opacity ${isSidebarOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
                 onClick={() => setIsSidebarOpen(false)}
             ></div>
-
-            {/* Sidebar */}
             <div className={`fixed top-0 left-0 h-full w-64 bg-white dark:bg-gray-800 p-4 flex flex-col border-r dark:border-gray-700 shadow-lg z-40 transform transition-transform md:relative md:translate-x-0 ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}>
                 <button onClick={onNewChat} className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold p-2 rounded mb-4 hover:scale-105 transform transition-transform flex items-center justify-center">
                     <i className="fas fa-plus mr-2"></i> New Chat

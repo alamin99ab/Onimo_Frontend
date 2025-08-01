@@ -13,7 +13,7 @@ import { Toaster } from 'react-hot-toast';
 function PrivateRoute({ children }) {
     const { isAuthenticated, loading } = useContext(AuthContext);
     if (loading) {
-        return <div>Loading...</div>; // Optional: Show a loading indicator
+        return <div>Loading...</div>; 
     }
     return isAuthenticated ? children : <Navigate to="/login" />;
 }
@@ -26,13 +26,10 @@ function LoginPage() {
 export default function AppContent() {
     const location = useLocation();
 
-    // --- মূল পরিবর্তন এখানে ---
-    // এই ভ্যারিয়েবলটি ঠিক করবে Navbar এবং Footer দেখানো হবে কিনা
     const showNavAndFooter = location.pathname !== '/chat';
 
     return (
         <div className="bg-white dark:bg-gray-900 min-h-screen flex flex-col">
-            {/* Navbar এখন শর্তসাপেক্ষে দেখানো হচ্ছে */}
             {showNavAndFooter && <Navbar />}
 
             <main className="flex-grow">
@@ -52,7 +49,6 @@ export default function AppContent() {
                 </Routes>
             </main>
             
-            {/* Footer-ও একই শর্তে দেখানো হচ্ছে */}
             {showNavAndFooter && <Footer />}
 
             <Toaster position="top-center" reverseOrder={false} />
